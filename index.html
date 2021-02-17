@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/scss/styles.css" />
+    <title>CoronaApp | Projects</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <nav class="navigation">
+          <img
+            class="corona-logo"
+            src="./assets/img/corona-logo.svg"
+            alt="logo to coronavirus"
+          />
+          <img
+            class="hamburger-logo"
+            id="menu"
+            src="./assets/img/hamburger-logo.svg"
+            alt="logo hamburger"
+          />
+          <ul class="nav-list" id="list-menu">
+            <li class="nav-items">inicio</li>
+            <li class="nav-items">Caracteristicas</li>
+            <li class="nav-items">apoyo</li>
+            <li class="nav-items">contactenos</li>
+          </ul>
+        </nav>
+      </div>
+      <section class="hero">
+        <div class="wrapper">
+          <div class="hero-content">
+            <div class="hero-data">
+              <h1 class="hero-data__title">
+                Cuida la salud de tu <span>familia</span>
+              </h1>
+              <p>
+                Todo en un destino para consultas de salud de COVID-19. Consulte
+                a más de 10,000 trabajadores de la salud sobre sus inquietudes.
+              </p>
+              <button class="btn btn--green">empezar</button>
+            </div>
+            <div class="hero-icon-video">
+              <img src="./assets/img/icon-play.svg" alt="icon play video" />
+              <span>ver video</span>
+            </div>
+            <img
+              class="hero-image"
+              src="./assets/img/doctor-image.svg"
+              alt="illustration to doctor"
+            />
+          </div>
+          <img
+            class="rectangle-img"
+            src="./assets/img/rectangle.svg"
+            alt="rectangle image"
+          />
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="wrapper">
+        <section class="about-content">
+          <div class="slide-content">
+            <div class="slider-container">
+              <img src="./assets/img/image1.svg" alt="image slide 1" />
+              <h3>Enfermedad por el nuevo coronavirus</h3>
+              <p>
+                La COVID-19 afecta de distintas maneras en función de cada
+                persona.
+              </p>
+            </div>
+          </div>
+          <div class="about-info">
+            <h3>Mantente seguro con <span>Coronaapp.</span></h3>
+            <p>
+              Soporte 24x7 y plataforma móvil fácil de usar para llevar la
+              atención médica a su alcance. Regístrese y sea parte de la nueva
+              cultura de la salud.
+            </p>
+            <button class="btn btn--green">empezar</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script>
+      const iconMenu = document.getElementById('menu');
+      const list = document.getElementById('list-menu');
+      function openMenu(e) {
+        list.classList.toggle('active');
+      }
+
+      iconMenu.addEventListener('click', openMenu);
+    </script>
+  </body>
+</html>
