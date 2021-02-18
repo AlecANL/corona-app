@@ -216,6 +216,10 @@ h3 span {
     margin-inline: auto;
     align-self: center;
   }
+  @include from(l) {
+    margin-block: 100px;
+    margin-inline-start: 100px;
+  }
 }
 .hero-content {
   @include from(pad) {

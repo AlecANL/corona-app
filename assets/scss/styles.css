@@ -267,6 +267,14 @@ h3 span {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .hero-image {
+    margin-block: 100px;
+    -webkit-margin-start: 100px;
+            margin-inline-start: 100px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .hero-content {
     inline-size: 80%;
