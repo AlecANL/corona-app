@@ -16,17 +16,19 @@
     <header class="header">
       <div class="wrapper">
         <nav class="navigation">
-          <img
-            class="corona-logo"
-            src="./assets/img/corona-logo.svg"
-            alt="logo to coronavirus"
-          />
-          <img
-            class="hamburger-logo"
-            id="menu"
-            src="./assets/img/hamburger-logo.svg"
-            alt="logo hamburger"
-          />
+          <div class="navigation__box-logos">
+            <img
+              class="corona-logo"
+              src="./assets/img/corona-logo.svg"
+              alt="logo to coronavirus"
+            />
+            <img
+              class="hamburger-logo"
+              id="menu"
+              src="./assets/img/hamburger-logo.svg"
+              alt="logo hamburger"
+            />
+          </div>
           <ul class="nav-list" id="list-menu">
             <li class="nav-items">inicio</li>
             <li class="nav-items">Caracteristicas</li>
@@ -90,6 +92,65 @@
           </div>
         </section>
       </div>
+      <section class="about-section">
+        <div class="wrapper">
+          <div class="about-section__content">
+            <div class="about-section__data-numbers">
+              <h3>2 m <span>usuarios</span></h3>
+              <h3>78 <span>paises</span></h3>
+              <h3>10,000 <span>expertos medicos</span></h3>
+            </div>
+            <div class="about-section__content-inf">
+              <div class="data">
+                <h3>Habla con los <span>expertos.</span></h3>
+                <p>
+                  Reserve citas o envíe consultas a miles de foros sobre
+                  problemas de salud y prevención contra el Corona Virus.
+                </p>
+                <button class="btn btn--green">caracteristicas</button>
+              </div>
+              <img src="./assets/img/video.svg" alt="video logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features-section">
+        <div class="wrapper">
+          <div class="features-section__content">
+            <h3><span>Cuida de la salud</span> al alcance de tu mano.</h3>
+            <p>Llevando funciones de atención médica premium a tu alcance.</p>
+            <div class="features-section__cards-container">
+              <div class="card">
+                <img src="./assets/img/icon1.svg" alt="icon person" />
+                <h4>Comprobador de síntomas</h4>
+                <p>
+                  Compruebe si está infectado por COVID-19 con nuestro
+                  Comprobador de síntomas
+                </p>
+              </div>
+              <div class="card">
+                <img src="./assets/img/iocn2.svg" alt="icon doctor" />
+                <h4>Soporte médico 24x7</h4>
+                <p>
+                  Consulte con más de 10,000 trabajadores de la salud acerca de
+                  sus inquietudes.
+                </p>
+              </div>
+              <div class="card">
+                <img src="./assets/img/icon3.svg" alt="icon toheart" />
+                <h4>Condiciones</h4>
+                <p>
+                  Llevando funciones de atención médica premium a tu alcance.
+                </p>
+              </div>
+            </div>
+            <div class="so-icons">
+              <img src="./assets/img/app-store-logo.png" alt="appsotre logo" />
+              <img src="./assets/img/logo-play.png" alt="icon android os" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script>
       const iconMenu = document.getElementById('menu');

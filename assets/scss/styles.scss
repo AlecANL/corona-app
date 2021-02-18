@@ -12,6 +12,7 @@ $breakpoints: (
   gfold: 280px,
   m: 411px,
   sm: 768px,
+  pad: 1024px,
   l: 1280px,
   x: 1400px,
 );
@@ -72,9 +73,6 @@ h3 span {
   color: var(--darknes-green);
 }
 /* Header*/
-.header {
-}
-
 /*
     NAV
 */
@@ -83,7 +81,14 @@ h3 span {
   @include from(l) {
     display: flex;
   }
+  &__box-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+  }
 }
+
 .nav-list {
   display: none;
   position: absolute;
@@ -127,8 +132,8 @@ h3 span {
 /* Logos into navbar */
 .corona-logo {
   margin-inline-start: 16px;
-  margin-inline-end: 168px;
-  margin-block-start: 37px;
+  // margin-inline-end: 168px;
+  // margin-block-start: 37px;
   @include from(l) {
     margin-inline-end: 167px;
     margin-block: 10px;
@@ -186,7 +191,8 @@ h3 span {
   inline-size: 144px;
   block-size: 44px;
   margin-block-start: 24.5px;
-  margin-inline: 130.5px;
+  // margin-inline: 130.5px;
+  margin-inline: auto;
   span {
     display: inline-block;
     text-transform: uppercase;
@@ -204,14 +210,26 @@ h3 span {
   margin-block-start: 44px;
   margin-block-end: 112px;
   margin-inline: 18px;
-  @include from(l) {
+  @include from(pad) {
     display: block;
     inline-size: 50%;
-    margin: 0;
+    margin-inline: auto;
     align-self: center;
   }
 }
-
+.hero-content {
+  @include from(pad) {
+    inline-size: 80%;
+    margin: auto;
+  }
+  @include from(sm) {
+    inline-size: 50%;
+    margin-inline: auto;
+  }
+  @include from(l) {
+    inline-size: 100%;
+  }
+}
 /* Buttons */
 .btn {
   border: none;
@@ -248,7 +266,7 @@ h3 span {
 /* Slide */
 .about-content {
   margin-block-end: 40px;
-  @include from(l) {
+  @include from(pad) {
     margin-block-start: 165px;
     display: flex;
     justify-content: space-around;
@@ -295,5 +313,185 @@ h3 span {
     inline-size: 40%;
     align-self: center;
     text-align: initial;
+  }
+}
+
+/* About section */
+
+.about-section {
+  margin-block-end: 39px;
+  background-color: var(--soft-white);
+  text-align: center;
+  &__content {
+    @include from(sm) {
+      inline-size: 50%;
+      margin: auto;
+    }
+    @include from(pad) {
+      inline-size: 80%;
+      margin: auto;
+    }
+    @include from(l) {
+      inline-size: 100%;
+    }
+  }
+  &__content p {
+    margin-block: 16px;
+    color: var(--soft-brown);
+    line-height: 16px;
+  }
+  &__content h3 {
+    font-size: 44px;
+  }
+  &__content button {
+    margin-block-end: 40px;
+  }
+  &__content img {
+    margin-block-end: 56px;
+    @include from(l) {
+      margin: auto;
+    }
+  }
+  &__data-numbers {
+    margin-block: 41px;
+    margin-inline: 16px;
+    background-color: var(--just-white);
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+    @include from(pad) {
+      inline-size: 80%;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__data-numbers h3 {
+    color: var(--darknes-green);
+    font-size: 36px;
+    line-height: 30px;
+    &:first-child {
+      padding-block-start: 28.05px;
+      @include from(pad) {
+        padding: 0;
+      }
+    }
+    &:nth-child(2) {
+      margin-block: 16px;
+      @include from(pad) {
+        margin: 0;
+      }
+    }
+    &:last-child {
+      padding-block-end: 28.05px;
+      @include from(pad) {
+        padding: 0;
+      }
+    }
+    @include from(pad) {
+      margin-block: 28px;
+    }
+  }
+  &__data-numbers h3 span {
+    display: block;
+    color: var(--just-black);
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  &__content-inf {
+    @include from(l) {
+      display: flex;
+      margin-block-start: 80px;
+    }
+  }
+  @include from(l) {
+    padding-block: 102px;
+  }
+}
+.data {
+  @include from(l) {
+    align-self: center;
+    text-align: initial;
+  }
+  p,
+  h3 {
+    margin-inline-start: 16px;
+  }
+}
+
+/* Features Section*/
+.features-section {
+  text-align: center;
+  &__content {
+    @include from(sm) {
+      inline-size: 50%;
+      margin-inline: auto;
+    }
+    @include from(pad) {
+      inline-size: 80%;
+    }
+  }
+  &__content h3 {
+    margin-block-end: 16px;
+    font-size: 44px;
+  }
+  &__content p {
+    padding-inline: 16px;
+    color: var(--soft-brown);
+    margin-block-end: 32px;
+  }
+  &__cards-container {
+    @include from(pad) {
+      display: flex;
+    }
+  }
+}
+
+/* Card */
+.card:not(:nth-child(2)) {
+  box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+  p {
+    margin-block-start: 6px;
+    padding-block-end: 30px;
+  }
+  @include from(l) {
+    inline-size: 50%;
+  }
+}
+.card {
+  box-sizing: border-box;
+  // block-size: 310px;
+  block-size: 100%;
+  margin-inline: 20px;
+  margin-block-end: 40px;
+  margin-block-start: 32px;
+  p {
+    color: var(--soft-brown);
+  }
+  img {
+    margin-block-start: 36px;
+    margin-block-end: 58px;
+  }
+}
+.so-icons {
+  padding-block: 10px;
+}
+.so-icons img {
+  display: block;
+  margin: auto;
+  margin-block-start: 24px;
+  @include from(l) {
+    margin: 0;
+  }
+  &:last-child {
+    margin-block-end: 40px;
+    @include from(pad) {
+      margin-block-end: 5px;
+    }
+  }
+  @include from(pad) {
+    display: inline-block;
   }
 }
