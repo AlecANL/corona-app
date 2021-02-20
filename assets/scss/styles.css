@@ -439,6 +439,7 @@ h3 span {
 
 @media screen and (min-width: 1280px) {
   .about-section__content {
+    position: relative;
     inline-size: 100%;
   }
 }
@@ -703,20 +704,22 @@ h3 span {
 }
 
 @media screen and (min-width: 1280px) {
-  .box::before {
+  .box-card--left::before,
+  .box-card--right::before {
     content: '';
     position: absolute;
     inline-size: 66px;
     block-size: 66px;
-    inset-block-end: 2%;
-    inset-inline-start: -2%;
+    inset-block-end: 5%;
+    inset-inline-start: -1%;
     background-color: var(--darknes-green);
     border-radius: 16px;
     -webkit-transform: rotate(30deg);
             transform: rotate(30deg);
     z-index: -1;
   }
-  .box::after {
+  .box-card--left::after,
+  .box-card--right::after {
     content: '';
     position: absolute;
     inset-inline-start: 25%;
@@ -728,5 +731,65 @@ h3 span {
     -webkit-transform: rotate(105deg);
             transform: rotate(105deg);
   }
+}
+
+.box-card--right::before {
+  inset-inline-start: 94%;
+  inset-block-start: 0;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.box-card--right::after {
+  inset-block-start: 65%;
+  inset-inline-start: 63%;
+  inline-size: 127px;
+  block-size: 127px;
+  border-radius: 30px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+/* Styles Boxes in about-section__data-numbers*/
+.box-1,
+.box-3,
+.box-2 {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: -7%;
+  display: none;
+  inline-size: 96px;
+  block-size: 96px;
+  background-color: var(--darknes-green);
+  -webkit-transform: rotate(105deg);
+          transform: rotate(105deg);
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 1280px) {
+  .box-1,
+  .box-3,
+  .box-2 {
+    display: block;
+  }
+}
+
+.box-2 {
+  inline-size: 66px;
+  block-size: 66px;
+  inset-inline-start: 8%;
+  inset-block-start: 13%;
+  border-radius: 16px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.box-3 {
+  inset-inline-start: 84%;
+  inset-block-start: 0;
+  inline-size: 127px;
+  block-size: 127px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
 }
 /*# sourceMappingURL=styles.css.map */

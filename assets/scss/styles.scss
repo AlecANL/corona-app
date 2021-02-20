@@ -132,8 +132,6 @@ h3 span {
 /* Logos into navbar */
 .corona-logo {
   margin-inline-start: 16px;
-  // margin-inline-end: 168px;
-  // margin-block-start: 37px;
   @include from(l) {
     margin-inline-end: 167px;
     margin-block: 10px;
@@ -190,7 +188,6 @@ h3 span {
   inline-size: 144px;
   block-size: 44px;
   margin-block-start: 24.5px;
-  // margin-inline: 130.5px;
   margin-inline: auto;
   span {
     display: inline-block;
@@ -335,6 +332,7 @@ h3 span {
       margin: auto;
     }
     @include from(l) {
+      position: relative;
       inline-size: 100%;
     }
   }
@@ -414,6 +412,7 @@ h3 span {
     padding-block: 102px;
   }
 }
+
 .data {
   @include from(l) {
     align-self: center;
@@ -507,15 +506,17 @@ h3 span {
     display: inline-block;
   }
 }
-.box {
+
+.box-card--left,
+.box-card--right {
   @include from(l) {
     &::before {
       content: '';
       position: absolute;
       inline-size: 66px;
       block-size: 66px;
-      inset-block-end: 2%;
-      inset-inline-start: -2%;
+      inset-block-end: 5%;
+      inset-inline-start: -1%;
       background-color: var(--darknes-green);
       border-radius: 16px;
       transform: rotate(30deg);
@@ -533,4 +534,51 @@ h3 span {
       transform: rotate(105deg);
     }
   }
+}
+.box-card--right {
+  &::before {
+    inset-inline-start: 94%;
+    inset-block-start: 0;
+    transform: rotate(-30deg);
+  }
+  &::after {
+    inset-block-start: 65%;
+    inset-inline-start: 63%;
+    inline-size: 127px;
+    block-size: 127px;
+    border-radius: 30px;
+    transform: rotate(-30deg);
+  }
+}
+/* Styles Boxes in about-section__data-numbers*/
+.box-1,
+.box-3,
+.box-2 {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: -7%;
+  display: none;
+  inline-size: 96px;
+  block-size: 96px;
+  background-color: var(--darknes-green);
+  transform: rotate(105deg);
+  border-radius: 30px;
+  @include from(l) {
+    display: block;
+  }
+}
+.box-2 {
+  inline-size: 66px;
+  block-size: 66px;
+  inset-inline-start: 8%;
+  inset-block-start: 13%;
+  border-radius: 16px;
+  transform: rotate(-30deg);
+}
+.box-3 {
+  inset-inline-start: 84%;
+  inset-block-start: 0;
+  inline-size: 127px;
+  block-size: 127px;
+  transform: rotate(-30deg);
 }
