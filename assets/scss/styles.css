@@ -200,7 +200,6 @@ h3 span {
           margin-block-end: 11px;
   margin-inline: 21px;
   color: var(--soft-brown);
-  font-size: 12px;
   line-height: 16.2px;
 }
 
@@ -482,6 +481,7 @@ h3 span {
 
 @media screen and (min-width: 1024px) {
   .about-section__data-numbers {
+    position: relative;
     inline-size: 80%;
     margin-inline: auto;
     display: -webkit-box;
@@ -617,8 +617,15 @@ h3 span {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .features-section__cards-container {
+    position: relative;
+  }
+}
+
 /* Card */
 .card:not(:nth-child(2)) {
+  background-color: var(--just-white);
   -webkit-box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
           box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
 }
@@ -630,21 +637,23 @@ h3 span {
           padding-block-end: 30px;
 }
 
-@media screen and (min-width: 1280px) {
-  .card:not(:nth-child(2)) {
-    inline-size: 50%;
-  }
-}
-
 .card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  block-size: 100%;
   margin-inline: 20px;
   -webkit-margin-after: 40px;
           margin-block-end: 40px;
   -webkit-margin-before: 32px;
           margin-block-start: 32px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    position: relative;
+    z-index: 100;
+    inline-size: 50%;
+  }
 }
 
 .card p {
@@ -690,6 +699,34 @@ h3 span {
 @media screen and (min-width: 1024px) {
   .so-icons img {
     display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .box::before {
+    content: '';
+    position: absolute;
+    inline-size: 66px;
+    block-size: 66px;
+    inset-block-end: 2%;
+    inset-inline-start: -2%;
+    background-color: var(--darknes-green);
+    border-radius: 16px;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+    z-index: -1;
+  }
+  .box::after {
+    content: '';
+    position: absolute;
+    inset-inline-start: 25%;
+    inset-block-start: 20%;
+    inline-size: 96px;
+    block-size: 96px;
+    background-color: var(--darknes-green);
+    border-radius: 16px;
+    -webkit-transform: rotate(105deg);
+            transform: rotate(105deg);
   }
 }
 /*# sourceMappingURL=styles.css.map */
